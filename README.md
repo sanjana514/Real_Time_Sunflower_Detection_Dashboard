@@ -1,4 +1,4 @@
-## 🌻 Sunflower Detection using Supervised, Semi-Supervised & Self-Supervised Learning
+### 🌻 Sunflower Detection using Supervised, Semi-Supervised & Self-Supervised Learning
 
 A comprehensive implementation and visualization framework for **sunflower detection** using **Supervised Learning, Semi-Supervised Learning (SSL), and Self-Supervised Learning (Self-SL)** based object detection models.
 
@@ -6,9 +6,9 @@ This repository includes model implementations, experiment notebooks, dataset co
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-## 1. Baseline Models
+### 1. Baseline Models
 
 **Location**
 
@@ -27,7 +27,7 @@ These notebooks include model training, evaluation, and performance analysis.
 
 ---
 
-## 2. Dataset Configuration
+### 2. Dataset Configuration
 
 **Location**
 
@@ -52,7 +52,7 @@ test: test/images
 
 ---
 
-## 3. Self-Supervised Learning Experiments
+### 3. Self-Supervised Learning Experiments
 
 **Location**
 
@@ -62,7 +62,7 @@ SSL Models/
 
 This directory contains notebooks and experimental results for different self-supervised learning approaches.
 
-### 📌 Ablation Study
+#### 📌 Ablation Study
 
 ```
 SSL Models/Ablation Study/
@@ -72,7 +72,7 @@ Contains hyperparameter tuning experiments and comparative analysis for selectin
 
 ---
 
-### 📌 BYOL
+#### 📌 BYOL
 
 ```
 SSL Models/BYOL/
@@ -82,7 +82,7 @@ Contains implementation and experiments using the **Bootstrap Your Own Latent (B
 
 ---
 
-### 📌 DINO
+#### 📌 DINO
 
 ```
 SSL Models/DINO/
@@ -92,7 +92,7 @@ Contains experiments using **DINO-based self-supervised representation learning*
 
 ---
 
-### 📌 Pseudo-STAC
+#### 📌 Pseudo-STAC
 
 ```
 SSL Models/PSEUDO_STAC/
@@ -102,7 +102,7 @@ Contains semi-supervised learning experiments using different labeled-to-unlabel
 
 ---
 
-# 📊 Streamlit Dashboard
+## 📊 Streamlit Dashboard
 
 **Location**
 
@@ -127,7 +127,7 @@ Streamlit App/
 
 ---
 
-# ✨ Dashboard Features
+## ✨ Dashboard Features
 
 The dashboard provides an interactive interface for comparing different learning approaches.
 
@@ -165,7 +165,7 @@ Users can browse:
 
 ---
 
-# 🛠 Technologies Used
+## 🛠 Technologies Used
 
 - Python
 - PyTorch
@@ -180,7 +180,7 @@ Users can browse:
 
 ---
 
-# 🚀 Running the Dashboard
+## 🚀 Running the Dashboard
 
 Install the required dependencies
 
@@ -202,7 +202,7 @@ run_ssl_dashboard.bat
 
 ---
 
-# 📈 Project Highlights
+## 📈 Project Highlights
 
 - Supervised object detection experiments
 - Semi-supervised learning pipeline
@@ -214,6 +214,6 @@ run_ssl_dashboard.bat
 
 ---
 
-# 📄 License
+## 📄 License
 
 This repository is intended for research and educational purposes.
