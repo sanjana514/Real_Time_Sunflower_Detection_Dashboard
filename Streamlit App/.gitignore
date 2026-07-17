@@ -1,0 +1,4 @@
+runs_ssl/
+*.pt
+*.pth
+runs_ssl/ssl_vit_rf-detr_dinov2/checkpoint_best_ema.pth
