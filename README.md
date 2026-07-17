@@ -1,63 +1,222 @@
-# 🌻 SSL, Semi-Supervised & Self-Supervised Sunflower Detection — Results & Dashboard
+# 🌻 Sunflower Detection using Supervised, Semi-Supervised & Self-Supervised Learning
 
-This repository contains the **result files, configuration files, SSL model outputs, ablation studies, and a Streamlit-based dashboard** for visualizing and comparing supervised, semi-supervised, and self-supervised sunflower detection experiments.
+A comprehensive implementation and visualization framework for **sunflower detection** using **Supervised Learning, Semi-Supervised Learning (SSL), and Self-Supervised Learning (Self-SL)** based object detection models.
 
-⚠️ **This repo contains scripts and results**  
-All folders store outputs generated from YOLO/SSL experiments on a COCO-formatted sunflower dataset.
+This repository includes model implementations, experiment notebooks, dataset configuration, performance analysis, and a Streamlit dashboard for interactive comparison of different learning approaches.
 
+---
 
-## 🧪 What This Repository Contains
+# 📂 Project Structure
 
-### **1️⃣ Baseline Supervised Model Outputs**
-Located in:
+## 1. Baseline Models
 
-BaseLine Models/ ---> .ipynb files of baseline supervised models
+**Location**
 
-  - YOLOv10s
-  - YOLO11s
-  - YOLO12s
-  - RF-DETR nano
+```
+BaseLine Models/
+```
 
-### **2️⃣ Dataset Configuration**
-Data Configuration/data_Sunflower.yaml ---> contains the transformed yaml file after transformation from COCO to YOLO
+Contains Jupyter notebooks for fully supervised object detection experiments using:
 
-data_Sunflower.yaml
+- YOLOv10s
+- YOLO11s
+- YOLO12s
+- RF-DETR Nano
+
+These notebooks include model training, evaluation, and performance analysis.
+
+---
+
+## 2. Dataset Configuration
+
+**Location**
+
+```
+Data Configuration/
+```
+
+Contains the dataset configuration file generated after converting the original COCO dataset into YOLO format.
+
+Example:
+
 ```yaml
-  names:
+names:
   - Sunflower
   - Sunflower
-  nc: 2
-  path: /kaggle/working/New_Converted_Dataset
-  test: test/images
-  train: train/images
-  val: valid/images
+
+nc: 2
+
+path: /kaggle/working/New_Converted_Dataset
+
+train: train/images
+val: valid/images
+test: test/images
 ```
 
+---
 
-### **3️⃣ SSL Model Results**
-Stored inside:
-```lua
+## 3. Self-Supervised Learning Experiments
+
+**Location**
+
+```
 SSL Models/
-│── Ablation Study/ ---> Contains different hyperparameter based best SSL performence
-│── BYOL/ ---> Contains YOLO backbone based model file
-│── DINO/ ---> Contains YOLO backbone based model file
-└── PSEUDO_STAC/ ---> Contains best YOLO backbone based model file for different label ratio
 ```
 
-### **4️⃣ Streamlit Dashboard**
-Found in:
-```lua
+This directory contains notebooks and experimental results for different self-supervised learning approaches.
+
+### 📌 Ablation Study
+
+```
+SSL Models/Ablation Study/
+```
+
+Contains hyperparameter tuning experiments and comparative analysis for selecting the best-performing SSL configuration.
+
+---
+
+### 📌 BYOL
+
+```
+SSL Models/BYOL/
+```
+
+Contains implementation and experiments using the **Bootstrap Your Own Latent (BYOL)** framework integrated with different YOLO backbones.
+
+---
+
+### 📌 DINO
+
+```
+SSL Models/DINO/
+```
+
+Contains experiments using **DINO-based self-supervised representation learning** with multiple YOLO variants.
+
+---
+
+### 📌 Pseudo-STAC
+
+```
+SSL Models/PSEUDO_STAC/
+```
+
+Contains semi-supervised learning experiments using different labeled-to-unlabeled data ratios.
+
+---
+
+# 📊 Streamlit Dashboard
+
+**Location**
+
+```
 Streamlit App/
-│ ├── runs_ssl/ # model output folders for dashboard
-│ ├── app.py # Streamlit dashboard
-│ ├── requirements.txt # dependencies
-│ ├── packages.txt
-│ ├── run_ssl_dashboard.bat # one-click run script (Windows)
-│ └── .gitignore
 ```
-This is a **fully interactive visualization dashboard** for comparing:
 
-- Semi-Supervised and SSL performace through best.pt files
-- Per-model mAP/P/R curves  
-- Train/Val loss plots  
-- Prediction example galleries that is image, video and live camera feed
+The repository includes an interactive Streamlit dashboard for visualizing model performance and inference results.
+
+Project structure:
+
+```
+Streamlit App/
+│
+├── app.py
+├── requirements.txt
+├── packages.txt
+├── run_ssl_dashboard.bat
+├── runs_ssl/
+└── .gitignore
+```
+
+---
+
+# ✨ Dashboard Features
+
+The dashboard provides an interactive interface for comparing different learning approaches.
+
+### Model Comparison
+
+- Supervised vs Semi-Supervised vs Self-Supervised models
+- Comparison across multiple YOLO backbones
+- Performance evaluation using best trained models
+
+### Performance Visualization
+
+- Precision
+- Recall
+- mAP
+- Training Loss
+- Validation Loss
+- Learning Curves
+
+### Prediction Visualization
+
+Supports inference on:
+
+- Images
+- Videos
+- Webcam / Live Camera Feed
+
+### Result Exploration
+
+Users can browse:
+
+- Prediction examples
+- Detection outputs
+- Evaluation plots
+- Performance summaries
+
+---
+
+# 🛠 Technologies Used
+
+- Python
+- PyTorch
+- Ultralytics YOLO
+- RF-DETR
+- BYOL
+- DINO
+- Streamlit
+- OpenCV
+- Pandas
+- Matplotlib
+
+---
+
+# 🚀 Running the Dashboard
+
+Install the required dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch the application
+
+```bash
+streamlit run app.py
+```
+
+or execute
+
+```
+run_ssl_dashboard.bat
+```
+
+---
+
+# 📈 Project Highlights
+
+- Supervised object detection experiments
+- Semi-supervised learning pipeline
+- Self-supervised representation learning
+- Ablation study analysis
+- Interactive Streamlit dashboard
+- Image, video and webcam inference
+- Performance comparison across multiple detection models
+
+---
+
+# 📄 License
+
+This repository is intended for research and educational purposes.
