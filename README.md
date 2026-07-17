@@ -43,11 +43,8 @@ Example:
 names:
   - Sunflower
   - Sunflower
-
 nc: 2
-
 path: /kaggle/working/New_Converted_Dataset
-
 train: train/images
 val: valid/images
 test: test/images
