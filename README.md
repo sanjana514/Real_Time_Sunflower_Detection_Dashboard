@@ -1,4 +1,4 @@
-# 🌻 Sunflower Detection using Supervised, Semi-Supervised & Self-Supervised Learning
+## 🌻 Sunflower Detection using Supervised, Semi-Supervised & Self-Supervised Learning
 
 A comprehensive implementation and visualization framework for **sunflower detection** using **Supervised Learning, Semi-Supervised Learning (SSL), and Self-Supervised Learning (Self-SL)** based object detection models.
 
